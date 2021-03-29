@@ -1,9 +1,11 @@
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Web App – Simple Interest Calculator</title>
     </head>
     <body>
+        <div id="container">
         <h1>Simple Interest Calculator</h1>
         <table>
             <tr>
@@ -13,9 +15,9 @@
                 </td>
             </tr>
             <tr>
-                <td>Rate</td>
+                <td>Interest Rate</td>
                 <td>
-                    <input type="range" min="0.5" max="10" value="3.5" step="0.5" id="rate" onload="updateRate()" onchange="updateRate()">
+                    <input type="range" min="1" max="20" value="3.5" step="0.5" id="rate" onload="updateRate()" onchange="updateRate()">
                 </td>
                 <td>
                     <p id="rateValue"></p>
@@ -44,8 +46,8 @@
 
            <br/>
            <br/>
-        Interest : <p id="result"></p><br>
-
+        <p id="result" onchange="updateLayout()"></p><br>
+        </div>
     </body>
-    <footer><p>(C) Everyone can get rich</p></footer>
+    <footer><p>Ⓒ Everyone Can Get Rich</p></footer>
 </html>
